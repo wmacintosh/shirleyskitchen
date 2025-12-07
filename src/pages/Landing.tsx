@@ -1,12 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { ChefHat, BookOpen, Heart } from "lucide-react";
+import { BookOpen, Heart } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import tartanBg from "@/assets/macintosh-tartan.jpg";
+import crestImg from "@/assets/macintosh-crest.png";
 
 const Landing = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen tartan-pattern flex items-center justify-center p-4">
+    <div 
+      className="min-h-screen flex items-center justify-center p-4 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: `url(${tartanBg})` }}
+    >
       {/* Glass card container */}
       <div className="relative max-w-lg w-full animate-scale-in">
         {/* Decorative elements */}
@@ -19,10 +24,12 @@ const Landing = () => {
         
         {/* Main card */}
         <div className="bg-card/95 backdrop-blur-sm rounded-3xl shadow-2xl p-8 md:p-12 text-center ring-1 ring-border/50">
-          {/* Chef hat icon */}
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary to-heritage-sky-glow rounded-2xl shadow-glow-sky mb-6">
-            <ChefHat className="w-10 h-10 text-primary-foreground" />
-          </div>
+          {/* Clan crest */}
+          <img 
+            src={crestImg} 
+            alt="MacIntosh Clan Crest" 
+            className="w-24 h-auto mx-auto mb-6 drop-shadow-lg"
+          />
 
           {/* Title */}
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-2 tracking-tight">
@@ -68,7 +75,6 @@ const Landing = () => {
             className="w-full group"
           >
             <span>Enter the Kitchen</span>
-            <ChefHat className="w-5 h-5 ml-2 transition-transform group-hover:rotate-12" />
           </Button>
 
           {/* Footer note */}
