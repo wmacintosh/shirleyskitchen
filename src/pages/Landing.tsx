@@ -28,7 +28,7 @@ const Landing = () => {
           <img 
             src={crestImg} 
             alt="MacIntosh Clan Crest" 
-            className="w-24 h-auto mx-auto mb-6 drop-shadow-lg"
+            className="w-36 h-auto mx-auto mb-6 drop-shadow-lg"
           />
 
           {/* Title */}
